@@ -1,0 +1,91 @@
+:root {
+  --black: #161616;
+  --red: red;
+  --darker_grey: #303030;
+  --dark_grey: #353535;
+  --medium_grey: #5e5e5e;
+  --grey: #8f8f8f;
+  --light_grey: rgb(192, 192, 192);
+  --dark_orange: #ff8100;
+  --orange: #c57600;
+  --light-orange: #ffba50;
+}
+* {
+  background-color: #2c2c2c;
+  color: var(--light_grey);
+  font-family: sans-serif;
+}
+
+.buttons {
+  margin: 4px;
+  background-color: var(--darker_grey);
+  color: var(--light_grey);
+  border-radius: 4px;
+}
+input option {
+  background-color: var(--dark_grey);
+  border: 1px solid var(--black) 4px;
+}
+
+.filters {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+table {
+  margin: 25px 0;
+  min-width: 400px;
+  font-size: 0.9em;
+  border-collapse: collapse;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+  border: 2px solid var(--black);
+}
+tr:nth-child(even) {
+  background-color: var(--dark_grey);
+}
+thead th {
+  background-color: var(--black);
+  padding: 4px 8px;
+}
+.styled-table th,
+td {
+  padding: 4px 8px;
+}
+
+a {
+  text-decoration: none;
+  color: var(--orange);
+  font-size: 16px;
+}
+a:link {
+  color: var(--light_orange);
+}
+a:visited {
+  color: var(--orange);
+}
+a:hover {
+  color: var(--dark_orange);
+}
+.header_title {
+  color: var(--light_grey);
+  text-align: center;
+}
+.subtitle {
+  font-size: 10px;
+  text-align: center;
+  margin-top: -15px;
+  color: var(--grey);
+}
+.value_tag {
+  margin: 2px;
+  background-color: var(--darker_grey);
+  color: var(--light_grey);
+  border-radius: 4px;
+}
+.tags_tag {
+  margin: 2px;
+  background-color: var(--darker_grey);
+  color: var(--light_grey);
+  border-radius: 4px;
+}
