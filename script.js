@@ -1,3 +1,4 @@
+// Base info needed
 const mlb = window.location.search.substr(1).toUpperCase();
 const category_fetch_url =
   "https://api.mercadolibre.com/categories/" + mlb + "?withAttributes=true";
@@ -15,9 +16,7 @@ const search_value = document.getElementById("search_value");
 
 // Includes redirect function to the root_categories_select element
 root_categories_select.onchange = () => {
-  window.location.search = (
-    "?" + root_categories_select.value || `?`
-  ).toString();
+  window.location.search = root_categories_select.value.toString();
 };
 
 // Fetching root categories
@@ -29,10 +28,13 @@ fetch("https://api.mercadolibre.com/sites/MLB/categories")
       const root_categories_option = document.createElement("option");
 
       root_categories_option.textContent = category.name;
-      root_categories_option.value = category.id;
+      root_categories_option.value = "?" + category.id;
 
       root_categories_select.appendChild(root_categories_option);
     });
+
+    // Setting the root category select value
+    root_categories_select.value = window.location.search;
   });
 
 //Getting Data
@@ -162,6 +164,7 @@ fetch(category_fetch_url)
 
 // Event Listener for search bar
 search_button.addEventListener("click", () => {
+  if (!search_value.value) return;
   let mlb = "?" + search_value.value || `?`;
   window.location.search = mlb.toString();
 });

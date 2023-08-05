@@ -16,25 +16,26 @@
   <p class="subtitle">Developed by Bigode</p>
 
   <div class="filters">
-    <input type="text" id="search_value" placeholder="Digite o código da categoria">
+    <input class="searchbar" type="text" id="search_value" placeholder="Digite o código da categoria">
     <input class="buttons" type="button" value="Pesquisar" id="search_button">
-    <select id="root_categories_select">
-      <option>Categorias Raíz</option>
+    <select class="select_category" id="root_categories_select">
+      <option value="?">Categorias Raíz</option>
     </select>
   </div>
 
   <div>
     <h3 id="category_tree"></h3>
     <h2 id="category_name"></h2>
+    <p class="subtitle_categories">Subcategorias:</p>
     <h3 id="childreen_categories"></h3>
   </div>
 
   <table>
-    <thead>
-      <th>Atributo</th>
-      <th>Tags</th>
-      <th>Dica/Descrição</th>
-      <th>Valores</th>
+    <thead width="100%">
+      <th width="25%">Atributo</th>
+      <th width="15%">Tags</th>
+      <th width="15%">Dica/Descrição</th>
+      <th width="45%">Valores</th>
     </thead>
     <tbody id="table_body">
     </tbody>
